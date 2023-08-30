@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css"/>
+</head>
+<body>
+
+<!--   HEADER SECTION -->
+
+<section>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <span class="fs-4">Challenge beers</span>
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="/home" class="nav-link text-dark">Home</a></li>
+                <li class="nav-item"><a href="/mugs" class="nav-link text-dark">Mugs</a></li>
+                <li class="nav-item"><a href="/cart" class="nav-link text-dark">Cart</a></li>
+            </ul>
+        </header>
+    </div>
+</section>
+
+<!-- HOME SECTION -->
+
+<section class="white-section">
+    <div class="container">
+        <h2 class="section-heading">Beers for Friday Challenge</h2>
+        <p>If you manage to complete the challenge, you will deserve a beer. Good luck!</p>
+    </div>
+</section>
+
+<!-- Footer -->
+
+<section>
+    <footer class="white-section" id="footer">
+        <div class="container-fluid fixed-bottom">
+            <i class="social-icon fab fa-facebook-f"></i>
+            <i class="social-icon fab fa-twitter"></i>
+            <i class="social-icon fab fa-instagram"></i>
+            <i class="social-icon fas fa-envelope"></i>
+            <p> &copy; Copyright 2023 by Łukasz Pokrzywka</p>
+        </div>
+    </footer>
+</section>
+
+</body>
+</html>

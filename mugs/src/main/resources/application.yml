@@ -1,12 +1,14 @@
 spring:
   application:
-    name: kubki
-  # H2 - zamień na Mongo jak będzie czas
+    name: mugs
   jpa:
     show-sql: true
     defer-datasource-initialization: true
     hibernate:
-    ddl-auto: create-drop
+      ddl-auto: create-drop
+  sql:
+    init:
+      mode: always
   h2:
     console:
       enabled: true
