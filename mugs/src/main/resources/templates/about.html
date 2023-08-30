@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Kubki</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css"/>
+</head>
+<body>
+
+<!--   HEADER SECTION -->
+
+<section>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <span class="fs-4">Studenckie Kubki</span>
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="/home" class="nav-link text-dark">Home</a></li>
+                <li class="nav-item"><a href="/mugs" class="nav-link text-dark">Kubki</a></li>
+                <li class="nav-item"><a href="/cart" class="nav-link text-dark">Koszyk</a></li>
+                <li class="nav-item"><a href="/about" class="nav-link text-dark">O projekcie</a></li>
+            </ul>
+        </header>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+
+<section>
+    <div class="container-lg">
+        <h2>Logika strony intenetowej</h2>
+        <p>Strona internetowa oferuje możliwość dodania kilku <em>Studenckich Kubków</em> (kufelków - i to oczywiście
+            żart ☻) do koszyka.
+            Następnie użytkownik może dokonać zakupu. User Journey powinno się rozpocząć na stronie /home,
+            następnie /kubki i zakończyć na /koszyk.</p>
+        <h2>Część techniczna</h2>
+        <p>Aplikacja bazuje na architekturze MVC. Użytkownik, poprzez frontend wysyła zapytania na stronę serwerową,
+            gdzie aplikacja korzysta z wbudowanej bazy danych H2. Baza danyh posiada dwie tabele. Pierwsza zawiera
+            ceny kufelków i za każdym razem kiedy użytkownik robi POST request, ta tabela podaje cenę konretnego kufelka
+            (id jest przekazywane przez query parameter). Druga tabela, "CARTS" pozwala na zssumowanie kilku produktów w
+            jeden koszyk zakupowy. Po dokonaiu zakupu, wartość koszyka się zeruje. Aplikacja utrzymuje sesje
+            użytkownika. </p>
+        <h2>Technologie wykorzystane</h2>
+        <div class="container-md">
+            <div class="row">
+                <div class="col-sm">
+                    <h5>Frontend</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Thymeleaf - silnik frontendowy</li>
+                        <li class="list-group-item">Bootstrap</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <h5>Backend</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Java & Spring</li>
+                        <li class="list-group-item">H2 DB</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <h5>Wdrożenie</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Docker</li>
+                        <li class="list-group-item">AWS ECS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h3>Linki</h3>
+        <ul>
+            <li><a href="https://github.com/lpokrzyw/kubki-okno-projekt">GitHub repo</a></li>
+            <li><a href="https://unsplash.com/">Żródło wykorzystanych zdjęć</a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- Footer -->
+
+<section>
+    <footer class="white-section" id="footer">
+        <div class="container-fluid fixed-bottom">
+            <i class="social-icon fab fa-facebook-f"></i>
+            <i class="social-icon fab fa-twitter"></i>
+            <i class="social-icon fab fa-instagram"></i>
+            <i class="social-icon fas fa-envelope"></i>
+            <p> &copy; Copyright 2022 Studenckie Kubki by Łukasz Pokrzywka</p>
+        </div>
+    </footer>
+</section>
+
+</body>
+</html>

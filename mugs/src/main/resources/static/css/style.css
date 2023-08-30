@@ -1,0 +1,27 @@
+
+/* Photos Section */
+
+#photo {
+    padding: 100px;
+}
+
+.photo-text {
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.photo-column {
+    padding: 3% 2%;
+}
+
+/* Footer Section */
+
+.social-icon {
+    margin: 20px 10px;
+}
+
+#footer {
+    text-align: center;
+}
+
+
